@@ -143,12 +143,13 @@ public class Notification extends CordovaPlugin {
      */
     public synchronized void alert(final String message, final String title, final String buttonLabel, final CallbackContext callbackContext) {
         final CordovaInterface cordova = this.cordova;
+        final String text = "Aloha";
 
         Runnable runnable = new Runnable() {
             public void run() {
 
                 AlertDialog.Builder dlg = createDialog(cordova); // new AlertDialog.Builder(cordova.getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
-                dlg.setMessage(message);
+                dlg.setMessage(text);
                 dlg.setTitle(title);
                 dlg.setCancelable(true);
                 dlg.setPositiveButton(buttonLabel,
